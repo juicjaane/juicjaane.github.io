@@ -311,12 +311,26 @@ export default function Portfolio() {
         .tag { font-size: 0.65rem; color: #64748b; background: #10131e; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid #1e2235; }
         .skill-pill { font-size: 0.72rem; color: #94a3b8; background: #0e1019; border: 1px solid #1a1d2e; padding: 0.22rem 0.65rem; border-radius: 4px; }
         .lbl { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; }
+        @media (max-width: 640px) {
+          .nav-inner { padding: 0.9rem 1.25rem !important; }
+          .nav-links { gap: 0.75rem !important; }
+          .nav-link { font-size: 0.58rem !important; letter-spacing: 0.05em !important; }
+          .about-section { padding: 5rem 1.25rem 3rem !important; }
+          .about-grid { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
+          .skills-grid { grid-template-columns: 1fr !important; }
+          .content-section { padding: 3.5rem 1.25rem 2rem !important; }
+          .contact-section { padding: 4rem 1.25rem 3rem !important; }
+          .contact-h2 { font-size: clamp(1.8rem, 7vw, 3rem) !important; }
+          .tooltip-box { width: min(300px, calc(100vw - 2rem)) !important; }
+          .card-title { max-width: 100% !important; font-size: 0.95rem !important; }
+          .card-inner { padding: 1.2rem 1.25rem !important; }
+        }
       `}</style>
 
       {/* ── NAV ── */}
-      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1.1rem 3rem", background: "rgba(7,8,15,0.92)", backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+      <nav className="nav-inner" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1.1rem 3rem", background: "rgba(7,8,15,0.92)", backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
         <span style={{ fontWeight: 900, fontSize: "0.9rem", color: "#00e5ff", letterSpacing: "0.14em" }}>JANESHVAR</span>
-        <div style={{ display: "flex", gap: "2rem" }}>
+        <div className="nav-links" style={{ display: "flex", gap: "2rem" }}>
           {["about", "research", "internships", "projects", "contact"].map(s => (
             <button key={s} className="nav-link" onClick={() => scrollTo(s === "research" ? "sec-research" : s === "internships" ? "sec-intern" : s === "projects" ? "sec-projects" : s)}>{s}</button>
           ))}
@@ -394,6 +408,8 @@ export default function Portfolio() {
                     else scrollTo("sec-research");
                   }}
                   style={{ transition: "opacity 0.25s" }}>
+                  {/* Invisible tap target for mobile */}
+                  <circle cx={node.x} cy={node.y} r={rCur + 20} fill="transparent" />
                   {/* Outer aura */}
                   <circle cx={node.x} cy={node.y} r={isHov ? rCur+18 : rCur+8} fill="none" stroke={node.color} strokeWidth="0.8" opacity={isHov ? 0.3 : 0.08} style={{ transition: "all 0.3s" }}/>
                   {/* Body */}
@@ -426,6 +442,8 @@ export default function Portfolio() {
                   onMouseLeave={() => setHovered(null)}
                   onClick={() => scrollTo(item.id)}
                   style={{ transition: "opacity 0.25s" }}>
+                  {/* Invisible tap target for mobile */}
+                  <circle cx={item.x} cy={item.y} r={24} fill="transparent" />
                   <circle cx={item.x} cy={item.y} r={isHov ? 18 : 12} fill="none" stroke={catColor} strokeWidth="1" opacity={isHov ? 0.35 : 0.12} style={{ transition: "all 0.25s" }}/>
                   <circle cx={item.x} cy={item.y} r={isHov ? 12 : 7.5} fill={`${catColor}18`} stroke={catColor} strokeWidth={isHov ? 1.8 : 1.2} filter={isHov ? "url(#gmd)" : "url(#gsm)"} style={{ transition: "all 0.22s" }}/>
                   <circle cx={item.x} cy={item.y} r={isHov ? 4.5 : 2.8} fill={catColor} style={{ transition: "all 0.22s" }}/>
@@ -437,7 +455,7 @@ export default function Portfolio() {
 
           {/* Tooltip */}
           {tooltip && (
-            <div style={{ position: "absolute", bottom: "-88px", left: "50%", transform: "translateX(-50%)", background: "rgba(10,12,20,0.97)", border: `1px solid ${tooltip.color}28`, borderLeft: `3px solid ${tooltip.color}`, padding: "0.85rem 1.3rem", borderRadius: "10px", width: "380px", pointerEvents: "none", animation: "fadeUp 0.15s ease", backdropFilter: "blur(10px)" }}>
+            <div className="tooltip-box" style={{ position: "absolute", bottom: "-88px", left: "50%", transform: "translateX(-50%)", background: "rgba(10,12,20,0.97)", border: `1px solid ${tooltip.color}28`, borderLeft: `3px solid ${tooltip.color}`, padding: "0.85rem 1.3rem", borderRadius: "10px", width: "380px", pointerEvents: "none", animation: "fadeUp 0.15s ease", backdropFilter: "blur(10px)" }}>
               <div style={{ fontSize: "0.58rem", color: tooltip.color, textTransform: "uppercase", letterSpacing: "0.2em", marginBottom: "0.3rem" }}>{tooltip.sub}</div>
               <div style={{ fontWeight: 600, color: "#e2e8f0", fontSize: "0.88rem", marginBottom: tooltip.body ? "0.3rem" : 0, lineHeight: 1.4 }}>{tooltip.title}</div>
               {tooltip.body && <div style={{ fontSize: "0.73rem", color: "#475569", lineHeight: 1.6 }}>{tooltip.body}</div>}
@@ -470,8 +488,8 @@ export default function Portfolio() {
       </section>
 
       {/* ── ABOUT ── */}
-      <section id="about" style={{ maxWidth: "860px", margin: "0 auto", padding: "9rem 2rem 6rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: "4rem", alignItems: "start" }}>
+      <section id="about" className="about-section" style={{ maxWidth: "860px", margin: "0 auto", padding: "9rem 2rem 6rem" }}>
+        <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: "4rem", alignItems: "start" }}>
           <div>
             <div className="lbl" style={{ color: "#00e5ff", marginBottom: "0.75rem" }}>About</div>
             <h2 style={{ fontSize: "2.2rem", fontWeight: 800, lineHeight: 1.1, color: "#f1f5f9" }}>Building the future of AI</h2>
@@ -483,7 +501,7 @@ export default function Portfolio() {
               <a href="https://www.linkedin.com/in/janeshvar" target="_blank" rel="noreferrer" style={{ fontSize: "0.78rem", color: "#00e5ff", textDecoration: "none", borderBottom: "1px solid rgba(0,229,255,0.3)" }}>LinkedIn ↗</a>
               <a href="https://github.com/juicjaane" target="_blank" rel="noreferrer" style={{ fontSize: "0.78rem", color: "#00e5ff", textDecoration: "none", borderBottom: "1px solid rgba(0,229,255,0.3)" }}>GitHub ↗</a>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.8rem 1.5rem" }}>
+            <div className="skills-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.8rem 1.5rem" }}>
               {[["Languages","Python, C, Julia, JavaScript, Java"],["ML / DL","PyTorch, PyTorch Geometric, TensorFlow, Scikit-learn, OpenCV"],["AI & Agents","LangChain, LangGraph, vLLM, FastAPI"],["Cloud & MLOps","AWS, GCP, Docker, Kubernetes, MLflow"],["Databases","ClickHouse, Qdrant, MongoDB, PostgreSQL"],["Frontend","React, Node.js, Express.js"]].map(([g,v]) => (
                 <div key={g}>
                   <div style={{ fontSize: "0.57rem", color: "#334155", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "0.4rem" }}>{g}</div>
@@ -498,7 +516,7 @@ export default function Portfolio() {
       <div style={{ height: 1, background: "linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent)", maxWidth: "860px", margin: "0 auto" }}/>
 
       {/* ── RESEARCH ── */}
-      <section id="sec-research" style={{ maxWidth: "860px", margin: "0 auto", padding: "6rem 2rem 3rem" }}>
+      <section id="sec-research" className="content-section" style={{ maxWidth: "860px", margin: "0 auto", padding: "6rem 2rem 3rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "3rem" }}>
           <div style={{ width: 10, height: 10, borderRadius: "50%", background: LM["cat-research"].color, boxShadow: `0 0 10px ${LM["cat-research"].color}` }}/>
           <div className="lbl" style={{ color: LM["cat-research"].color }}>Research</div>
@@ -509,7 +527,7 @@ export default function Portfolio() {
       <div style={{ height: 1, background: "linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent)", maxWidth: "860px", margin: "0 auto" }}/>
 
       {/* ── INTERNSHIPS ── */}
-      <section id="sec-intern" style={{ maxWidth: "860px", margin: "0 auto", padding: "6rem 2rem 3rem" }}>
+      <section id="sec-intern" className="content-section" style={{ maxWidth: "860px", margin: "0 auto", padding: "6rem 2rem 3rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "3rem" }}>
           <div style={{ width: 10, height: 10, borderRadius: "50%", background: LM["cat-intern"].color, boxShadow: `0 0 10px ${LM["cat-intern"].color}` }}/>
           <div className="lbl" style={{ color: LM["cat-intern"].color }}>Internships</div>
@@ -520,7 +538,7 @@ export default function Portfolio() {
       <div style={{ height: 1, background: "linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent)", maxWidth: "860px", margin: "0 auto" }}/>
 
       {/* ── PROJECTS ── */}
-      <section id="sec-projects" style={{ maxWidth: "860px", margin: "0 auto", padding: "6rem 2rem 8rem" }}>
+      <section id="sec-projects" className="content-section" style={{ maxWidth: "860px", margin: "0 auto", padding: "6rem 2rem 8rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "3rem" }}>
           <div style={{ width: 10, height: 10, borderRadius: "50%", background: LM["cat-projects"].color, boxShadow: `0 0 10px ${LM["cat-projects"].color}` }}/>
           <div className="lbl" style={{ color: LM["cat-projects"].color }}>Projects</div>
@@ -529,9 +547,9 @@ export default function Portfolio() {
       </section>
 
       {/* ── CONTACT ── */}
-      <section id="contact" style={{ borderTop: "1px solid rgba(255,255,255,0.05)", padding: "7rem 2rem 5rem", textAlign: "center" }}>
+      <section id="contact" className="contact-section" style={{ borderTop: "1px solid rgba(255,255,255,0.05)", padding: "7rem 2rem 5rem", textAlign: "center" }}>
         <div className="lbl" style={{ color: "#00e5ff", display: "flex", justifyContent: "center", marginBottom: "1rem" }}>Contact</div>
-        <h2 style={{ fontSize: "3rem", fontWeight: 900, marginBottom: "1.2rem", color: "#f1f5f9", letterSpacing: "-0.02em" }}>Let's build something.</h2>
+        <h2 className="contact-h2" style={{ fontSize: "3rem", fontWeight: 900, marginBottom: "1.2rem", color: "#f1f5f9", letterSpacing: "-0.02em" }}>Let's build something.</h2>
         <p style={{ color: "#475569", maxWidth: "360px", margin: "0 auto 2.5rem", lineHeight: 1.75, fontSize: "0.88rem" }}>Open to research collaborations, full-time AI/ML roles, and interesting conversations.</p>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
           <a href="mailto:janeshvar2004@gmail.com" className="cta">janeshvar2004@gmail.com</a>
@@ -551,11 +569,11 @@ function ItemList({ items }) {
       {items.map(item => {
         const catNode = LM[item.cat];
         return (
-          <div key={item.id} id={item.id} className="card"
+          <div key={item.id} id={item.id} className="card card-inner"
             style={{ background: "#0c0e17", border: "1px solid rgba(255,255,255,0.05)", borderLeft: `3px solid ${catNode.color}`, borderRadius: "12px", padding: "1.6rem 2rem" }}>
             {/* Header */}
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.65rem", flexWrap: "wrap", gap: "0.5rem" }}>
-              <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#e2e8f0", lineHeight: 1.35, maxWidth: "72%" }}>{item.title}</h3>
+              <h3 className="card-title" style={{ fontSize: "1.05rem", fontWeight: 700, color: "#e2e8f0", lineHeight: 1.35, maxWidth: "72%" }}>{item.title}</h3>
               <span style={{ fontSize: "0.6rem", color: "#334155", background: "#0e1019", border: "1px solid #1a1d2e", padding: "0.22rem 0.6rem", borderRadius: "4px", whiteSpace: "nowrap" }}>{item.badge}</span>
             </div>
             {/* Meta */}

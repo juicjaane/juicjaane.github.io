@@ -53,6 +53,10 @@ const ITEMS = [
       "Ongoing work on LOSO generalization via domain adversarial and meta learning; improving interpretability of neural rewiring post-stroke via graph representations.",
     ],
     tags: ["PyTorch Geometric", "EEG", "Graph Attention", "Meta-Learning", "BCI"],
+    links: [
+      { label: "Code", url: "https://github.com/juicjaane/Rewiring-Recognition" },
+      { label: "Paper", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6849798" },
+    ],
     x: 710, y: 530,
   },
   {
@@ -66,6 +70,9 @@ const ITEMS = [
       "Achieved a 1000× reduction in CO fluctuation to 0.1 ppm.",
     ],
     tags: ["LSTM", "Simulated Annealing", "Bayesian Optimisation", "Physics-Informed ML"],
+    links: [
+      { label: "Code", url: "https://github.com/juicjaane/Crystal-growth-Optimisation-Using-Machine-Learning" },
+    ],
     x: 644, y: 482,
   },
   {
@@ -131,6 +138,9 @@ const ITEMS = [
       "Implemented heatmap regression and segmentation models with geometric fitting, improving accuracy of BPD and OFD estimates on curated ultrasound datasets.",
     ],
     tags: ["Heatmap Regression", "Segmentation", "Medical Imaging", "PyTorch"],
+    links: [
+      { label: "Code", url: "https://github.com/juicjaane/Fetal-Ultrasound-Landmark-Detection" },
+    ],
     x: 551, y: 482,
   },
   {
@@ -155,6 +165,9 @@ const ITEMS = [
       "Fine-tuned the MuRIL Transformer on a manually annotated Tamil dataset, achieving 77.76% accuracy for women-targeted abusive comment detection in a low-resource language setting.",
     ],
     tags: ["MuRIL", "Transformers", "Low-Resource NLP", "Tamil"],
+    links: [
+      { label: "Paper", url: "https://aclanthology.org/2025.dravidianlangtech-1.6/" },
+    ],
     x: 383, y: 259,
   },
   {
@@ -168,6 +181,9 @@ const ITEMS = [
       "Integrated into a platform connecting companies and NGOs to generate and manage Green Credits.",
     ],
     tags: ["GIS", "Satellite Imagery", "Supervised ML", "Mangrove Mapping"],
+    links: [
+      { label: "Code", url: "https://github.com/juicjaane/bal" },
+    ],
     x: 393, y: 454,
   },
   {
@@ -180,6 +196,9 @@ const ITEMS = [
       "Developed a real-time de-hazing solution for smoke-obscured video using ResNet-CNN and HOG-based object detection, enhancing visibility and human tracking for search-and-rescue operations.",
     ],
     tags: ["ResNet", "HOG", "OpenCV", "Real-time CV"],
+    links: [
+      { label: "Code", url: "https://github.com/juicjaane/Intelligent-De-Hazing-Smoking-Algorithm" },
+    ],
     x: 467, y: 417,
   },
 ];
@@ -309,6 +328,8 @@ export default function Portfolio() {
         .out-btn { display: inline-block; border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; padding: 0.85rem 2rem; border-radius: 8px; font-weight: 500; text-decoration: none; font-size: 0.9rem; transition: border-color 0.2s, color 0.2s; }
         .out-btn:hover { border-color: #00e5ff; color: #00e5ff; }
         .tag { font-size: 0.65rem; color: #64748b; background: #10131e; padding: 0.2rem 0.55rem; border-radius: 4px; border: 1px solid #1e2235; }
+        .proj-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.68rem; color: #94a3b8; background: #0e1019; border: 1px solid #1e2235; padding: 0.28rem 0.7rem; border-radius: 5px; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+        .proj-link:hover { border-color: #00e5ff; color: #00e5ff; }
         .skill-pill { font-size: 0.72rem; color: #94a3b8; background: #0e1019; border: 1px solid #1a1d2e; padding: 0.22rem 0.65rem; border-radius: 4px; }
         .lbl { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; }
         @media (max-width: 640px) {
@@ -594,6 +615,16 @@ function ItemList({ items }) {
                 <span key={d} style={{ fontSize: "0.62rem", color: LM[d].color, background: `${LM[d].color}12`, border: `1px solid ${LM[d].color}28`, padding: "0.18rem 0.5rem", borderRadius: "4px" }}>{LM[d].label}</span>
               ))}
             </div>
+            {/* Links: code / paper */}
+            {item.links && item.links.length > 0 && (
+              <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "1rem" }}>
+                {item.links.map(l => (
+                  <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="proj-link">
+                    {l.label === "Paper" ? "📄" : "‹›"} {l.label} ↗
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         );
       })}

@@ -135,7 +135,7 @@ const ITEMS = [
     meta: "Democratising robot-learning data from everyday video",
     bullets: [
       "Built a pipeline that converts a single monocular webcam video of human hand manipulation into a Franka Panda joint-angle trajectory with no teleoperation hardware, producing demonstrations drop-in compatible with ACT and Diffusion Policy.",
-      "Chained MediaPipe hand tracking, Depth Anything V2 metric depth, 3D smoothing, and IK solving in MuJoCo, achieving a 91.6% IK success rate (≤4 cm error) across 333 frames.",
+      "Chained MediaPipe hand tracking, Depth Anything V2 metric depth, 3D smoothing, and IK solving in MuJoCo.",
     ],
     tags: ["MuJoCo", "MediaPipe", "Depth Anything V2", "Inverse Kinematics", "Robot Learning"],
     links: [

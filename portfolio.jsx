@@ -128,6 +128,22 @@ const ITEMS = [
   },
   // Projects
   {
+    id: "h2r", short: "H2R",
+    title: "H2R – Human-to-Robot Trajectory Transfer from Monocular Video",
+    cat: "cat-projects", doms: ["d-robotics", "d-cv", "d-mleng"],
+    badge: "Jun 2026 · Personal Project",
+    meta: "Democratising robot-learning data from everyday video",
+    bullets: [
+      "Built a pipeline that converts a single monocular webcam video of human hand manipulation into a Franka Panda joint-angle trajectory with no teleoperation hardware, producing demonstrations drop-in compatible with ACT and Diffusion Policy.",
+      "Chained MediaPipe hand tracking, Depth Anything V2 metric depth, 3D smoothing, and IK solving in MuJoCo, achieving a 91.6% IK success rate (≤4 cm error) across 333 frames.",
+    ],
+    tags: ["MuJoCo", "MediaPipe", "Depth Anything V2", "Inverse Kinematics", "Robot Learning"],
+    links: [
+      { label: "Code", url: "https://github.com/juicjaane/H2R" },
+    ],
+    x: 505, y: 565,
+  },
+  {
     id: "fetal-us", short: "Fetal US",
     title: "Fetal Ultrasound Landmark Detection & Segmentation",
     cat: "cat-projects", doms: ["d-cv", "d-healthcare"],

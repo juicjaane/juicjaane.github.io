@@ -131,7 +131,7 @@ const ITEMS = [
     id: "h2r", short: "H2R",
     title: "H2R – Human-to-Robot Trajectory Transfer from Monocular Video",
     cat: "cat-projects", doms: ["d-robotics", "d-cv", "d-mleng"],
-    badge: "Jun 2026 · Personal Project",
+    badge: "Apr 2026 · Personal Project",
     meta: "Democratising robot-learning data from everyday video",
     bullets: [
       "Built a pipeline that converts a single monocular webcam video of human hand manipulation into a Franka Panda joint-angle trajectory with no teleoperation hardware, producing demonstrations drop-in compatible with ACT and Diffusion Policy.",

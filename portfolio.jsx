@@ -47,15 +47,15 @@ const ITEMS = [
     title: "Neuroplasticity Adaptive Graph Attention Networks for Motor Imagery Decoding",
     cat: "cat-research", doms: ["d-healthcare", "d-sciml", "d-timeseries"],
     badge: "May 2025 – Apr 2026",
-    meta: "Final Year Thesis · Supervisor: Dr. R. Kanchana, SSN · Submitted to Int. Journal of Neural Systems",
+    meta: "Final Year Thesis · Supervisor: Dr. R. Kanchana, SSN · Under review at Biomedical Signal Processing and Control",
     bullets: [
-      "Proposed the NAGAN model with multi-scale temporal encoding and phase-based functional connectivity, achieving 89.7% accuracy across Physionet, OpenBCI, and acute stroke EEG datasets.",
-      "Ongoing work on LOSO generalization via domain adversarial and meta learning; improving interpretability of neural rewiring post-stroke via graph representations.",
+      "Developed the Neuroplasticity-Aware Graph Attention Network (NAGAN), integrating multi-scale temporal encoding with trial-specific phase-locking value (PLV) connectivity graphs, achieving up to 89.1% accuracy, 0.782 Cohen's Kappa, and 0.890 Macro-F1 on acute stroke motor imagery EEG decoding across PhysioNet, OpenBCI, and clinical stroke datasets.",
+      "Extended NAGAN for calibration-free cross-subject decoding using Riemannian Procrustes Alignment (RPA), Differentiable Graph Generation (DGG), and Domain Adversarial Neural Networks (DANN), attaining 87.9% LOSO accuracy on acute stroke EEG and 75.2% on the UET-175 stroke cohort.",
     ],
-    tags: ["PyTorch Geometric", "EEG", "Graph Attention", "Meta-Learning", "BCI"],
+    tags: ["PyTorch Geometric", "EEG", "Graph Attention", "Domain Adaptation", "BCI"],
     links: [
       { label: "Code", url: "https://github.com/juicjaane/Rewiring-Recognition" },
-      { label: "Paper", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6849798" },
+      { label: "Paper", url: "https://doi.org/10.2139/ssrn.6849798" },
     ],
     x: 710, y: 530,
   },
@@ -169,7 +169,26 @@ const ITEMS = [
       "Developed a multi-agent resume analysis system with role-based recommendations, deterministic scoring metrics, and semantic evaluation.",
     ],
     tags: ["LangGraph", "Multi-Agent", "Semantic Eval", "NLP"],
+    links: [
+      { label: "Live", url: "https://jobreadyssn.vercel.app" },
+    ],
     x: 740, y: 345,
+  },
+  {
+    id: "streak", short: "Streak/Stars",
+    title: "Streak & Star Detection in Astronomical Images",
+    cat: "cat-projects", doms: ["d-cv"],
+    badge: "May 2025",
+    meta: "",
+    bullets: [
+      "Built an image processing pipeline to segment streaks and stars and trained an RCNN-based detector for real-time inference.",
+      "Designed a method that removes the need for a large labelled dataset while preserving accuracy and generalisability.",
+    ],
+    tags: ["RCNN", "Image Processing", "Object Detection", "OpenCV"],
+    links: [
+      { label: "Code", url: "https://github.com/juicjaane/Streak-and-Stars" },
+    ],
+    x: 345, y: 515,
   },
   {
     id: "abusive", short: "Abusive Det.",
@@ -182,9 +201,39 @@ const ITEMS = [
     ],
     tags: ["MuRIL", "Transformers", "Low-Resource NLP", "Tamil"],
     links: [
+      { label: "Code", url: "https://github.com/saaaathvik/wise" },
       { label: "Paper", url: "https://aclanthology.org/2025.dravidianlangtech-1.6/" },
     ],
     x: 383, y: 259,
+  },
+  {
+    id: "onyx", short: "Onyx",
+    title: "Onyx – Carbon Offset Tracking for Coal Mining Operations",
+    cat: "cat-projects", doms: ["d-nlp", "d-remote"],
+    badge: "Nov 2024 · HackZ Finalist (1,500+ teams)",
+    meta: "",
+    bullets: [
+      "Built a platform for carbon offset estimation in coal mining using open-source datasets and satellite-based analytics.",
+      "Fine-tuned LLMs for RAG and table question answering on Indian sustainability standards.",
+    ],
+    tags: ["RAG", "LLM Fine-tuning", "Table QA", "Satellite Analytics"],
+    x: 430, y: 560,
+  },
+  {
+    id: "retinal", short: "Retinal Seg.",
+    title: "Retinal Vessel Segmentation & Diabetic Risk Prediction",
+    cat: "cat-projects", doms: ["d-cv", "d-healthcare"],
+    badge: "Nov 2024",
+    meta: "SSN College of Engineering",
+    bullets: [
+      "Built a novel retinal vessel segmentation pipeline achieving 92% accuracy compared to expert annotations.",
+      "Trained classical and deep learning models (VGG16, ResNet50, EfficientNetB0); deployed the best model via Docker and GCP with a Firebase-hosted web interface for real-time inference.",
+    ],
+    tags: ["VGG16", "ResNet50", "EfficientNetB0", "Docker", "GCP"],
+    links: [
+      { label: "Code", url: "https://github.com/juicjaane/Retinal-Vessel-Segmentation-and-Automated-Diabetic-Risk-Detection-" },
+    ],
+    x: 620, y: 575,
   },
   {
     id: "blueai", short: "Blue.ai",
@@ -216,6 +265,19 @@ const ITEMS = [
       { label: "Code", url: "https://github.com/juicjaane/Intelligent-De-Hazing-Smoking-Algorithm" },
     ],
     x: 467, y: 417,
+  },
+  {
+    id: "airwriting", short: "Air Writing",
+    title: "AI/ML-Based Air Writing System",
+    cat: "cat-projects", doms: ["d-cv"],
+    badge: "Mar 2023 · SSN Internally Funded",
+    meta: "",
+    bullets: [
+      "Led a research project to develop an air-writing system that recognizes hand-gesture trajectories and wrist-based writing movements for assistive communication and rehabilitation.",
+      "Qualified for SSN's Internally Funded Project; deployed a lightweight CNN-based model on Raspberry Pi for real-time inference.",
+    ],
+    tags: ["CNN", "Gesture Recognition", "Raspberry Pi", "Edge AI"],
+    x: 340, y: 340,
   },
 ];
 
@@ -636,7 +698,7 @@ function ItemList({ items }) {
               <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "1rem" }}>
                 {item.links.map(l => (
                   <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="proj-link">
-                    {l.label === "Paper" ? "📄" : "‹›"} {l.label} ↗
+                    {l.label === "Paper" ? "📄" : l.label === "Live" ? "🔗" : "‹›"} {l.label} ↗
                   </a>
                 ))}
               </div>

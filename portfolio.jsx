@@ -591,7 +591,7 @@ export default function Portfolio() {
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: "4rem", alignItems: "start" }}>
           <div>
             <div className="lbl" style={{ color: "#00e5ff", marginBottom: "0.75rem" }}>About</div>
-            <h2 style={{ fontSize: "2.2rem", fontWeight: 800, lineHeight: 1.1, color: "#f1f5f9" }}>Building the future of AI</h2>
+            <h2 style={{ fontSize: "2.2rem", fontWeight: 800, lineHeight: 1.1, color: "#f1f5f9" }}>Building the future with AI</h2>
           </div>
           <div style={{ color: "#64748b", lineHeight: 1.85, fontSize: "0.9rem" }}>
             <p style={{ marginBottom: "1.2rem", color: "#94a3b8" }}>I'm Janeshvar Sivakumar — incoming student to the MS in Artificial Intelligence and Innovation program at Carnegie Mellon University. I recently completed my B.E. in Computer Science and Engineering from SSN College of Engineering, Anna University, where I spent four years applying AI to a wide range of problems and having a lot of fun while at it.</p>

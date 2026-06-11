@@ -31,9 +31,9 @@ const ITEMS = [
   // Research
   {
     id: "llm-ideation", short: "LLM Ideation",
-    title: "LLM-Driven Automated Research Topic Ideation",
+    title: "A Framework for Evaluation of LLM-Driven Automated Research Topic Ideation",
     cat: "cat-research", doms: ["d-nlp", "d-sciml", "d-mleng"],
-    badge: "Aug 2025 – Aug 2026",
+    badge: "Aug – Dec 2025",
     meta: "Supervisor: Dr. Claus Horn, Yale University",
     bullets: [
       "Developing a multi-dimensional evaluation framework for AI-generated research ideas across novelty, feasibility, and diversity using signal processing and machine learning.",
@@ -443,7 +443,7 @@ export default function Portfolio() {
 
         {/* Headline */}
         <div style={{ position: "relative", zIndex: 2, textAlign: "center", marginBottom: "1.5rem", animation: "fadeUp 0.8s ease" }}>
-          <div style={{ fontSize: "0.62rem", letterSpacing: "0.38em", color: "#00e5ff", textTransform: "uppercase", marginBottom: "0.8rem" }}>Builder of AI · Fryer of GPUs</div>
+          <div style={{ fontSize: "0.62rem", letterSpacing: "0.38em", color: "#00e5ff", textTransform: "uppercase", marginBottom: "0.8rem" }}>Passionate about frying GPUs</div>
           <h1 style={{ fontSize: "clamp(2.6rem, 7vw, 5rem)", fontWeight: 900, letterSpacing: "-0.025em", lineHeight: 0.95, background: "linear-gradient(140deg,#fff 25%,#00e5ff 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             JANESHVAR<br/>SIVAKUMAR
           </h1>

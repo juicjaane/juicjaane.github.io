@@ -75,19 +75,6 @@ const ITEMS = [
     ],
     x: 644, y: 482,
   },
-  {
-    id: "un-fellow", short: "UN Fellow",
-    title: "UN Millennium Fellow – Urbanization Study, Tamil Nadu",
-    cat: "cat-research", doms: ["d-remote", "d-cv"],
-    badge: "Sep 2024",
-    meta: "UN Academic Impact Millennium Fellow 2024, SSN College of Engineering",
-    bullets: [
-      "Led an environmental impact study on urbanization in Tamil Nadu, applying GIS, remote sensing, and machine learning to quantify urban sprawl.",
-      "Derived data-driven insights for sustainable urban planning.",
-    ],
-    tags: ["GIS", "Remote Sensing", "Urban ML"],
-    x: 430, y: 343,
-  },
   // Internships
   {
     id: "tyke-anomaly", short: "Anomaly Det.",
@@ -188,7 +175,7 @@ const ITEMS = [
     links: [
       { label: "Code", url: "https://github.com/juicjaane/Streak-and-Stars" },
     ],
-    x: 345, y: 515,
+    x: 445, y: 475,
   },
   {
     id: "abusive", short: "Abusive Det.",
@@ -234,6 +221,19 @@ const ITEMS = [
       { label: "Code", url: "https://github.com/juicjaane/Retinal-Vessel-Segmentation-and-Automated-Diabetic-Risk-Detection-" },
     ],
     x: 620, y: 575,
+  },
+  {
+    id: "un-fellow", short: "UN Fellow",
+    title: "UN Millennium Fellow – Urbanization Study, Tamil Nadu",
+    cat: "cat-projects", doms: ["d-remote", "d-cv"],
+    badge: "Sep 2024 · UN Academic Impact",
+    meta: "UN Academic Impact Millennium Fellow 2024, SSN College of Engineering",
+    bullets: [
+      "Led an environmental impact study on urbanization in Tamil Nadu, applying GIS, remote sensing, and machine learning to quantify urban sprawl.",
+      "Derived data-driven insights for sustainable urban planning.",
+    ],
+    tags: ["GIS", "Remote Sensing", "Urban ML"],
+    x: 430, y: 343,
   },
   {
     id: "blueai", short: "Blue.ai",

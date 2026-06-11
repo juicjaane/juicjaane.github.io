@@ -78,7 +78,7 @@ const ITEMS = [
   // Internships
   {
     id: "tyke-anomaly", short: "Anomaly Det.",
-    title: "TykeVision – Anomaly Detection on Large-Scale Telemetry",
+    title: "TykeVision: Anomaly Detection on Large-Scale Telemetry",
     cat: "cat-intern", doms: ["d-timeseries", "d-mleng"],
     badge: "May – Aug 2025",
     meta: "AI/ML Intern, TykeVision India",
@@ -90,7 +90,7 @@ const ITEMS = [
   },
   {
     id: "tyke-agent", short: "Agentic RCA",
-    title: "TykeVision – AI-Driven Root Cause Analysis Agent",
+    title: "TykeVision: AI-Driven Root Cause Analysis Agent",
     cat: "cat-intern", doms: ["d-nlp", "d-mleng"],
     badge: "May – Aug 2025",
     meta: "AI/ML Intern, TykeVision India",
@@ -102,7 +102,7 @@ const ITEMS = [
   },
   {
     id: "konect", short: "Konect U",
-    title: "Konect U – Agentic Automation & LLM Pipeline",
+    title: "Konect U: Agentic Automation & LLM Pipeline",
     cat: "cat-intern", doms: ["d-nlp", "d-mleng"],
     badge: "Aug 2024 – Feb 2025",
     meta: "AI/ML Engineer Intern",
@@ -116,7 +116,7 @@ const ITEMS = [
   // Projects
   {
     id: "h2r", short: "H2R",
-    title: "H2R – Human-to-Robot Trajectory Transfer from Monocular Video",
+    title: "H2R: Human-to-Robot Trajectory Transfer from Monocular Video",
     cat: "cat-projects", doms: ["d-robotics", "d-cv", "d-mleng"],
     badge: "Apr 2026 · Personal Project",
     meta: "Democratising robot-learning data from everyday video",
@@ -148,7 +148,7 @@ const ITEMS = [
   },
   {
     id: "career-align", short: "Career Align",
-    title: "Career Align – Resume Analysis & Recommendation Platform",
+    title: "Career Align: Resume Analysis & Recommendation Platform",
     cat: "cat-projects", doms: ["d-nlp", "d-mleng"],
     badge: "Aug 2025",
     meta: "Adopted by SSN peers; under review for SSN Career Development Center",
@@ -195,7 +195,7 @@ const ITEMS = [
   },
   {
     id: "onyx", short: "Onyx",
-    title: "Onyx – Carbon Offset Tracking for Coal Mining Operations",
+    title: "Onyx: Carbon Offset Tracking for Coal Mining Operations",
     cat: "cat-projects", doms: ["d-nlp", "d-remote"],
     badge: "Nov 2024 · HackZ Finalist (1,500+ teams)",
     meta: "",
@@ -224,7 +224,7 @@ const ITEMS = [
   },
   {
     id: "un-fellow", short: "UN Fellow",
-    title: "UN Millennium Fellow – Urbanization Study, Tamil Nadu",
+    title: "UN Millennium Fellow: Urbanization Study, Tamil Nadu",
     cat: "cat-projects", doms: ["d-remote", "d-cv"],
     badge: "Sep 2024 · UN Academic Impact",
     meta: "UN Academic Impact Millennium Fellow 2024, SSN College of Engineering",
@@ -237,7 +237,7 @@ const ITEMS = [
   },
   {
     id: "blueai", short: "Blue.ai",
-    title: "Blue.ai – Blue Carbon Sequestration & Green Credit Platform",
+    title: "Blue.ai: Blue Carbon Sequestration & Green Credit Platform",
     cat: "cat-projects", doms: ["d-remote", "d-cv"],
     badge: "Jun 2024 · SAP Hackfest Finalist (2,500+ teams)",
     meta: "",
@@ -253,7 +253,7 @@ const ITEMS = [
   },
   {
     id: "dehazer", short: "Dehazer",
-    title: "Dehazer – Intelligent De-hazing Algorithm",
+    title: "Dehazer: Intelligent De-hazing Algorithm",
     cat: "cat-projects", doms: ["d-cv"],
     badge: "Dec 2023 · SIH Top 5 Nationwide · Encender 3rd",
     meta: "Smart India Hackathon 2023 DRDO Track",
@@ -591,11 +591,12 @@ export default function Portfolio() {
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: "4rem", alignItems: "start" }}>
           <div>
             <div className="lbl" style={{ color: "#00e5ff", marginBottom: "0.75rem" }}>About</div>
-            <h2 style={{ fontSize: "2.2rem", fontWeight: 800, lineHeight: 1.1, color: "#f1f5f9" }}>Building the future with AI</h2>
+            <h2 style={{ fontSize: "2.2rem", fontWeight: 800, lineHeight: 1.1, color: "#f1f5f9", marginBottom: "1.5rem" }}>Building the future with AI</h2>
+            <img src="/janeshvar.jpeg" alt="Janeshvar Sivakumar" style={{ width: "100%", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.07)", objectFit: "cover", aspectRatio: "3/4" }} />
           </div>
           <div style={{ color: "#64748b", lineHeight: 1.85, fontSize: "0.9rem" }}>
-            <p style={{ marginBottom: "1.2rem", color: "#94a3b8" }}>I'm Janeshvar Sivakumar — incoming student to the MS in Artificial Intelligence and Innovation program at Carnegie Mellon University. I recently completed my B.E. in Computer Science and Engineering from SSN College of Engineering, Anna University, where I spent four years applying AI to a wide range of problems and having a lot of fun while at it.</p>
-            <p style={{ marginBottom: "1.75rem" }}>My current interests are in Robot Learning and Computer Vision — particularly Vision-Language-Action models, the data collection and augmentation pipelines behind them, and World Models. I have a lot of learning ahead of me and I'm looking forward to my time at CMU to dig deeper and contribute to this space.</p>
+            <p style={{ marginBottom: "1.2rem", color: "#94a3b8" }}>I'm Janeshvar Sivakumar, an incoming student to the MS in Artificial Intelligence and Innovation program at Carnegie Mellon University. I recently completed my B.E. in Computer Science and Engineering from SSN College of Engineering, Anna University, where I spent four years applying AI to a wide range of problems and having a lot of fun while at it.</p>
+            <p style={{ marginBottom: "1.75rem" }}>My current interests are in Robot Learning and Computer Vision, particularly Vision-Language-Action models, the data collection and augmentation pipelines behind them, and World Models. I have a lot of learning ahead of me and I'm looking forward to my time at CMU to dig deeper and contribute to this space.</p>
             <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1.75rem" }}>
               <a href="https://www.linkedin.com/in/janeshvar" target="_blank" rel="noreferrer" style={{ fontSize: "0.78rem", color: "#00e5ff", textDecoration: "none", borderBottom: "1px solid rgba(0,229,255,0.3)" }}>LinkedIn ↗</a>
               <a href="https://github.com/juicjaane" target="_blank" rel="noreferrer" style={{ fontSize: "0.78rem", color: "#00e5ff", textDecoration: "none", borderBottom: "1px solid rgba(0,229,255,0.3)" }}>GitHub ↗</a>

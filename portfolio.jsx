@@ -594,8 +594,8 @@ export default function Portfolio() {
             <h2 style={{ fontSize: "2.2rem", fontWeight: 800, lineHeight: 1.1, color: "#f1f5f9" }}>Building the future of AI</h2>
           </div>
           <div style={{ color: "#64748b", lineHeight: 1.85, fontSize: "0.9rem" }}>
-            <p style={{ marginBottom: "1.2rem", color: "#94a3b8" }}>I'm Janeshvar Sivakumar, I like pushing the limits of any software/hardware. I am driven by curiosity and that has led me to various corners of the world of AI. Currently my focus lies on Robot learning, VLAs and Dataset Generation for the same.</p>
-            <p style={{ marginBottom: "1.75rem" }}>My work bridges fundamental research to production systems serving thousands of users. I have barely scratched the surface in AI and I am always to open to learn. </p>
+            <p style={{ marginBottom: "1.2rem", color: "#94a3b8" }}>I'm Janeshvar Sivakumar — incoming student to the MS in Artificial Intelligence and Innovation program at Carnegie Mellon University. I recently completed my B.E. in Computer Science and Engineering from SSN College of Engineering, Anna University, where I spent four years applying AI to a wide range of problems and having a lot of fun while at it.</p>
+            <p style={{ marginBottom: "1.75rem" }}>My current interests are in Robot Learning and Computer Vision — particularly Vision-Language-Action models, the data collection and augmentation pipelines behind them, and World Models. I have a lot of learning ahead of me and I'm looking forward to my time at CMU to dig deeper and contribute to this space.</p>
             <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1.75rem" }}>
               <a href="https://www.linkedin.com/in/janeshvar" target="_blank" rel="noreferrer" style={{ fontSize: "0.78rem", color: "#00e5ff", textDecoration: "none", borderBottom: "1px solid rgba(0,229,255,0.3)" }}>LinkedIn ↗</a>
               <a href="https://github.com/juicjaane" target="_blank" rel="noreferrer" style={{ fontSize: "0.78rem", color: "#00e5ff", textDecoration: "none", borderBottom: "1px solid rgba(0,229,255,0.3)" }}>GitHub ↗</a>

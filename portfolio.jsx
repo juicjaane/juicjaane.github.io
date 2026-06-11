@@ -131,7 +131,7 @@ const ITEMS = [
     x: 505, y: 565,
   },
   {
-    id: "fetal-us", short: "Fetal US",
+    id: "fetal-us", short: "Fetal Ultrasound",
     title: "Fetal Ultrasound Landmark Detection & Segmentation",
     cat: "cat-projects", doms: ["d-cv", "d-healthcare"],
     badge: "Jan 2026",

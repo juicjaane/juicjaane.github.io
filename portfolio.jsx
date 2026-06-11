@@ -678,11 +678,11 @@ function ItemList({ items }) {
               <span style={{ fontSize: "0.6rem", color: "#334155", background: "#0e1019", border: "1px solid #1a1d2e", padding: "0.22rem 0.6rem", borderRadius: "4px", whiteSpace: "nowrap" }}>{item.badge}</span>
             </div>
             {/* Meta */}
-            {item.meta && <div style={{ fontSize: "0.75rem", color: "#475569", marginBottom: "0.85rem", fontStyle: "italic" }}>{item.meta}</div>}
+            {item.meta && <div style={{ fontSize: "0.75rem", color: "#64748b", marginBottom: "0.85rem", fontStyle: "italic" }}>{item.meta}</div>}
             {/* Bullets */}
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.45rem", marginBottom: "1rem" }}>
               {item.bullets.map((b, i) => (
-                <li key={i} style={{ fontSize: "0.83rem", color: "#4b5563", lineHeight: 1.75, paddingLeft: "1rem", position: "relative" }}>
+                <li key={i} style={{ fontSize: "0.83rem", color: "#94a3b8", lineHeight: 1.75, paddingLeft: "1rem", position: "relative" }}>
                   <span style={{ position: "absolute", left: 0, color: catNode.color, fontSize: "0.58rem", top: "0.45rem" }}>▸</span>{b}
                 </li>
               ))}

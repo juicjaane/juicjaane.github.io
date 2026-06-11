@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import profilePhoto from "./src/janeshvar.jpeg";
 
 // ── LAYOUT ──────────────────────────────────────────────────────────────────
 // 12 large nodes arranged in a circle (r=270, center 560,380)
@@ -592,7 +593,7 @@ export default function Portfolio() {
           <div>
             <div className="lbl" style={{ color: "#00e5ff", marginBottom: "0.75rem" }}>About</div>
             <h2 style={{ fontSize: "2.2rem", fontWeight: 800, lineHeight: 1.1, color: "#f1f5f9", marginBottom: "1.5rem" }}>Building the future with AI</h2>
-            <img src="/janeshvar.jpeg" alt="Janeshvar Sivakumar" style={{ width: "100%", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.07)", objectFit: "cover", aspectRatio: "3/4" }} />
+            <img src={profilePhoto} alt="Janeshvar Sivakumar" style={{ width: "100%", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.07)", objectFit: "cover", aspectRatio: "3/4" }} />
           </div>
           <div style={{ color: "#64748b", lineHeight: 1.85, fontSize: "0.9rem" }}>
             <p style={{ marginBottom: "1.2rem", color: "#94a3b8" }}>I'm Janeshvar Sivakumar, an incoming student to the MS in Artificial Intelligence and Innovation program at Carnegie Mellon University. I recently completed my B.E. in Computer Science and Engineering from SSN College of Engineering, Anna University, where I spent four years applying AI to a wide range of problems and having a lot of fun while at it.</p>
